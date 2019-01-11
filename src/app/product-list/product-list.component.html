@@ -1,10 +1,9 @@
 <ul>
   <li *ngFor="let product of products">
     <a
-      routerLink='/product/{{product.id}}'
-      routerLinkActive=active
+      mat-button
+      [routerLink]="['/product/:id', { id: product.id }]"
+      >{{ product.albumName }}</a
     >
-      {{ product.albumName }}
-    </a>
   </li>
 </ul>
